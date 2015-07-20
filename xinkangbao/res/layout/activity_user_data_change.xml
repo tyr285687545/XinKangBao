@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/data_change_top"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7"
+        android:focusable="false"
+        android:focusableInTouchMode="false" >
+
+        <ImageView
+            android:id="@+id/data_change_top_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:contentDescription="@string/app_name"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:padding="7dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/data_change_top_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="@string/my"
+            android:textColor="#FFF"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/data_change_top_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cut_top"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/data_change_top"
+        android:layout_marginTop="10dp"
+        android:background="#E0E0E0"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <EditText
+        android:id="@+id/tv_data_change"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/cut_top"
+        android:background="#FFF"
+        android:focusable="true"
+        android:paddingLeft="5dp"
+        android:focusableInTouchMode="true"
+        android:imeOptions="actionGo"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/cut_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_data_change"
+        android:background="#E0E0E0"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</RelativeLayout>

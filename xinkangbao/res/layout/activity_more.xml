@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+   <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="36dip"
+        android:background="@drawable/widget_head_bg" >
+
+        <TextView
+            android:id="@+id/geren_ziliao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:ellipsize="middle"
+            android:gravity="center_horizontal"
+            android:text="个人资料  "
+            android:textSize="16sp" />
+   
+ 	</RelativeLayout>
+
+    <TextView
+        android:id="@+id/name_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:text="nick" />
+    
+         
+     <TextView
+        android:id="@+id/tel_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_more"
+        android:layout_alignLeft="@+id/name_more"
+        android:text="tel" />
+
+    <TextView
+        android:id="@+id/age_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name_more"
+        android:layout_below="@+id/tel_more"
+        android:text="age" />
+
+    <TextView
+        android:id="@+id/sex_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/age_more"
+        android:layout_alignLeft="@+id/name_more"
+        android:text="sex" />
+
+    
+     <TextView
+        android:id="@+id/address_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sex_more"
+        android:layout_alignLeft="@+id/name_more"
+        android:text="address" />
+     
+     <TextView
+        android:id="@+id/mail_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_more"
+        android:layout_alignLeft="@+id/name_more"
+        android:text="mail" />
+
+  <TableLayout
+      android:id="@+id/relativeLayout2"
+      android:layout_width="240dip"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/mail_more"
+      android:layout_marginLeft="25dip"
+      android:layout_marginTop="10dip"
+      android:orientation="vertical" >
+
+        <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="300dip"
+        android:layout_height="28dip"
+        
+        android:layout_marginTop="10dp"
+      
+        android:background="@drawable/back_more_button"
+        android:baselineAligned="false"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_setting" />
+
+        <Button
+            android:id="@+id/update_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="修改个人信息"
+            android:textSize="16sp" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="300dip"
+        android:layout_height="28dip"
+        android:layout_marginTop="2dp"
+      
+        android:background="@drawable/back_more_button"
+        android:baselineAligned="false"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_add" />
+
+        <Button
+            android:id="@+id/add_doc_rela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="修改密码"
+            android:textSize="16sp" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="300dip"
+        android:layout_height="28dip"
+        android:layout_marginTop="2dp"
+      
+        android:background="@drawable/back_more_button"
+        android:baselineAligned="false"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/order_img"/>
+
+        <Button
+            android:id="@+id/order_item_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="我的预约"
+            android:textSize="16sp" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="300dip"
+        android:layout_height="28dip"
+        android:layout_marginTop="2dp"
+      
+        android:background="@drawable/back_more_button"
+        android:baselineAligned="false"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/order_img"/>
+
+        <Button
+            android:id="@+id/pos_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="位置服务"
+            android:textSize="16sp" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="300dip"
+        android:layout_height="28dip"
+        android:layout_marginTop="2dp"
+      
+        android:background="@drawable/back_more_button"
+        android:baselineAligned="false"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_close" />
+
+        <Button
+            android:id="@+id/exit_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="退出"
+            android:textSize="16sp" />
+    </TableRow> 
+   </TableLayout>
+</RelativeLayout>
+

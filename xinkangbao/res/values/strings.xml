@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">心康宝</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_tap_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_update">最近更新：</string>
+    <string name="comment_reply_title">---共有 %d 条评论---</string>
+    <string name="question_pub_head_title">我要发帖</string>
+    <string name="frame_title_all_docs">找医生</string>
+    <string name="frame_title_my_docs">我的医生</string>
+    <string name="frame_title_summary">简介</string>
+    <string name="frame_title_chat">咨询</string>
+    <string name="frame_title_opp">预约</string>
+    <string name="frame_title_adddoc">添加到我的医生</string>
+    <string name="frame_title_deldoc">删除我的医生</string>
+
+    <string-array name="post_pub_options">
+        <item>默认分类</item>
+    </string-array>
+
+    <string name="frame_title_question_ask">问答</string>
+    <string name="comment_pub_content_hint">输入评论</string>
+    <string name="comment_pub_head_title">评论回复</string>
+</resources>

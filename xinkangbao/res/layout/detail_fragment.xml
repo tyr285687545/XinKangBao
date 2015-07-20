@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scroll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rela_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#FFF"
+                android:padding="13dp" >
+
+                <ImageView
+                    android:id="@+id/iv_fragment_1"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/hospital" />
+
+                <TextView
+                    android:id="@+id/tv_hospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/iv_fragment_1"
+                    android:text="@string/doctor_detail"
+                    android:textColor="#4d4d4d"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_detail_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_hospital"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/iv_fragment_1"
+                    android:text="@string/doctor_detail"
+                    android:textColor="#4d4d4d"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <!-- cut line -->
+
+            <RelativeLayout
+                android:id="@+id/function_cut_line"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_below="@+id/rela_info"
+                android:background="#EEEEF9" />
+            <!-- 擅长 -->
+
+            <RelativeLayout
+                android:id="@+id/rela_goodat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/function_cut_line"
+                android:layout_gravity="center_horizontal"
+                android:background="#FFF"
+                android:padding="13dp" >
+
+                <ImageView
+                    android:id="@+id/iv_goodat"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/goodat" />
+
+                <TextView
+                    android:id="@+id/tv_goodat_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_goodat"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/iv_goodat"
+                    android:maxLines="3"
+                    android:text="@string/person_text"
+                    android:textColor="#4d4d4d"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_goodat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_goodat_detail"
+                    android:layout_alignTop="@+id/iv_goodat"
+                    android:text="@string/goodat"
+                    android:textColor="#4d4d4d"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+            <!-- cut line -->
+
+            <RelativeLayout
+                android:id="@+id/function_cut_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_below="@+id/rela_goodat"
+                android:background="#EEEEF9" />
+            <!-- 个人简历 -->
+
+            <RelativeLayout
+                android:id="@+id/rela_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/function_cut_line_2"
+                android:layout_gravity="center_horizontal"
+                android:background="#FFF"
+                android:padding="13dp" >
+
+                <ImageView
+                    android:id="@+id/iv_person"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/person" />
+
+                <TextView
+                    android:id="@+id/tv_person_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_person"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/iv_person"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:singleLine="false"
+                    android:text="@string/person_text"
+                    android:textColor="#4d4d4d"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_person_detail"
+                    android:layout_alignTop="@+id/iv_person"
+                    android:text="@string/person"
+                    android:textColor="#4d4d4d"
+                    android:textSize="19sp" />
+                <!-- 更多 -->
+
+                <RelativeLayout
+                    android:id="@+id/rela_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_person_detail"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/tv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableBottom="@drawable/down"
+                        android:text="@string/more"
+                        android:textColor="#808080"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_spread"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableBottom="@drawable/up"
+                        android:text="@string/spread"
+                        android:textColor="#808080"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!-- cut line -->
+
+            <RelativeLayout
+                android:id="@+id/function_cut_line_3"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_below="@+id/rela_person"
+                android:visibility="gone"
+                android:background="#EEEEF9" />
+
+            <RelativeLayout
+                android:id="@+id/rela_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/function_cut_line_3"
+                android:layout_gravity="center_horizontal"
+                android:background="#FFF"
+                android:visibility="gone"
+                android:padding="13dp" >
+
+                <ImageView
+                    android:id="@+id/iv_read"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/essay" />
+
+                <TextView
+                    android:id="@+id/tv_read_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_read"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/iv_read"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:singleLine="false"
+                    android:text="@string/person_text"
+                    android:textColor="#4d4d4d"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_read_detail"
+                    android:layout_alignTop="@+id/iv_read"
+                    android:text="@string/read"
+                    android:textColor="#4d4d4d"
+                    android:textSize="19sp" />
+                <!-- 更多 -->
+
+                <RelativeLayout
+                    android:id="@+id/rela_more_read"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_read_detail"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/tv_more_read"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableBottom="@drawable/down"
+                        android:text="@string/more"
+                        android:textColor="#808080"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_spread_read"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableBottom="@drawable/up"
+                        android:text="@string/spread"
+                        android:textColor="#808080"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/function_cut_line_4"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_below="@+id/rela_read"
+                android:visibility="gone"
+                android:background="#EEEEF9" />
+
+            <RelativeLayout
+                android:id="@+id/rela_explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/function_cut_line_4"
+                android:layout_gravity="center_horizontal"
+                android:background="#FFF"
+                android:visibility="gone"
+                android:padding="13dp" >
+
+                <TextView
+                    android:id="@+id/tv_explain_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_explain"
+                    android:layout_marginLeft="12dp"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:singleLine="false"
+                    android:text="@string/person_text"
+                    android:textColor="#4d4d4d"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_explain_detail"
+                    android:text="@string/explain"
+                    android:textColor="#4d4d4d"
+                    android:textSize="19sp" />
+                <!-- 更多 -->
+
+                <RelativeLayout
+                    android:id="@+id/rela_more_explain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_explain_detail"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/tv_more_explain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableBottom="@drawable/down"
+                        android:text="@string/more"
+                        android:textColor="#808080"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_spread_explain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableBottom="@drawable/up"
+                        android:text="@string/spread"
+                        android:textColor="#808080"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

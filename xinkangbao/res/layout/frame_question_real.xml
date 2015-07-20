@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/frame_btn_question_ask"
+            style="@style/frame_button"
+            android:text="@string/frame_title_question_ask" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/frame_button_cutline" />
+    </LinearLayout>
+
+    <org.example.myapp.client.view.PullToRefreshListView
+        android:id="@+id/frame_listview_question"
+        style="@style/widget_listview" />
+	
+</LinearLayout>

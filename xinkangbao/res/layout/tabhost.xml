@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/main_radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp" >
+
+            <RadioButton
+                android:id="@+id/tab_buddy"
+                android:layout_width="0dp"
+                android:layout_height="47dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/tab_selector_home"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/main_doctor_service"
+                android:layout_width="0dp"
+                android:layout_height="45dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_selector_douctor" />
+
+            <RadioButton
+                android:id="@+id/main_footbar_question"
+                android:layout_width="45dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:button="@null"
+                android:drawableTop="@drawable/bg_menu_mid" />
+
+            <RadioButton
+                android:id="@+id/tab_health"
+                android:layout_width="0dp"
+                android:layout_height="45dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_selector_health" />
+
+            <RadioButton
+                android:id="@+id/tab_more"
+                android:layout_width="0dp"
+                android:layout_height="45dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_selector_communicate" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

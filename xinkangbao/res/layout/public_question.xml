@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/public_question_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/public_question_head_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:padding="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_menu" />
+
+        <TextView
+            android:id="@+id/public_question_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/public_question"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/public_question_head_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <ListView 
+        android:id="@+id/public_question_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/public_question_head"/>
+</RelativeLayout>

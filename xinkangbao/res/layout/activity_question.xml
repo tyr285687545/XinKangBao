@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/question_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/question_head_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/function_menu" />
+
+        <TextView
+            android:id="@+id/question_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/question"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/question_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/question_rela_ask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_head"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp" >
+
+        <ImageView
+            android:id="@+id/question_iv_mine"
+            android:layout_width="106dp"
+            android:layout_height="42dp"
+            android:layout_weight="3"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/question"
+            android:src="@drawable/myquestion" />
+
+        <ImageView
+            android:id="@+id/question_iv_askfordoc"
+            android:layout_width="106dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_weight="3"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/question"
+            android:src="@drawable/askfordoctor" />
+
+        <ImageView
+            android:id="@+id/question_iv_allques"
+            android:layout_width="106dp"
+            android:layout_height="42dp"
+            android:layout_weight="3"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/question"
+            android:src="@drawable/allquestion" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/question_cut_line"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/question_rela_ask"
+        android:background="#EEEEF9" />
+
+    <RelativeLayout
+        android:id="@+id/question_rela_public"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_below="@+id/question_cut_line"
+        android:padding="15dp" >
+
+        <ImageView
+            android:id="@+id/question_iv_public_head_pic"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:contentDescription="@string/question"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/publicquestion" />
+
+        <TextView
+            android:id="@+id/question_tv_public_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/question_iv_public_head_pic"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/question_iv_public_head_pic"
+            android:text="@string/public_question"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="#333"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/question_tv_public_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/question_iv_public_head_pic"
+            android:layout_marginLeft="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_toRightOf="@+id/question_iv_public_head_pic"
+            android:text="@string/public_question_have_answer"
+            android:textColor="#999"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/question_iv_toright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/public_question"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/question"
+            android:src="@drawable/toright" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/question_cut_line2"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/question_rela_public"
+        android:background="#EEEEF9" />
+
+    <ListView
+        android:id="@+id/question_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/question_cut_line2" />
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/head_num"
+        android:layout_width="51dp"
+        android:layout_height="51dp" 
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/question_lv_item_head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/question"
+            android:src="@drawable/doctordefault" />
+
+        <org.example.myapp.widget.Round
+            android:id="@+id/round"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/question_lv_item_docname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/head_num"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/head_num"
+        android:textColor="#333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/question_lv_item_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_lv_item_docname"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/head_num"
+        android:singleLine="true"
+        android:textColor="#999"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/question_lv_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/question_lv_item_docname"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="9dp"
+        android:textColor="#B3B3B3"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF" >
+
+    <RelativeLayout
+        android:id="@+id/health_head"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/health_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/health_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/persondata"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/function_head_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/health_head" >
+
+        <LinearLayout
+            android:id="@+id/linear_1_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/health_name"
+                android:textColor="#A4A4A4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/name"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_1_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" >
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:gravity="center_vertical"
+                android:text="@string/health_sex"
+                android:textColor="#A4A4A4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/et_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/health_women"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear_1"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:id="@+id/linear_2"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_2" >
+
+        <LinearLayout
+            android:id="@+id/linear_2_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" >
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/health_age"
+                android:textColor="#A4A4A4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/et_age"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/health_age_num"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_2_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" >
+
+            <TextView
+                android:id="@+id/tv_alone"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:gravity="center_vertical"
+                android:text="@string/health_live_alone"
+                android:textColor="#A4A4A4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/et_alone"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/health_live_alone_yes_no"
+                android:textColor="#000"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear_2"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:id="@+id/linear_3"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_3" >
+
+        <TextView
+            android:id="@+id/tv_archives_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/health_phonenum"
+            android:textColor="#A4A4A4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_archives_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/phonenum"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear_3"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:id="@+id/linear_4"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_4" >
+
+        <TextView
+            android:id="@+id/tv_archives_address"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/health_address"
+            android:textColor="#A4A4A4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_address"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/health_address"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_5"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/linear_4"
+        android:background="#EEEEF9" />
+
+    <LinearLayout
+        android:id="@+id/linear_5"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_5" >
+
+        <TextView
+            android:id="@+id/tv_watch_person"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/health_jianhur"
+            android:textColor="#A4A4A4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_watch_person"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/name"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear_5"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:id="@+id/linear_6"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_6" >
+
+        <TextView
+            android:id="@+id/tv_watch_person_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/health_jianhur_phone"
+            android:textColor="#A4A4A4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_watch_person_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_7"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/linear_6"
+        android:background="#EEEEF9" />
+
+    <LinearLayout
+        android:id="@+id/linear_7"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_7" >
+
+        <TextView
+            android:id="@+id/tv_healeh_hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/healeh_hospital"
+            android:textColor="#A4A4A4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_healeh_hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/hospital_name"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear_7"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:id="@+id/linear_8"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_8" >
+
+        <TextView
+            android:id="@+id/tv_healeh_depart"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/healeh_depart"
+            android:textColor="#A4A4A4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_healeh_depart"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/healeh_depart_item"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear_8"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:id="@+id/linear_9"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_9" >
+
+        <TextView
+            android:id="@+id/tv_healeh_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/healeh_doctor"
+            android:textColor="#A4A4A4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_healeh_coctor"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/name"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cutline_10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear_9"
+        android:background="#E6E6E6" />
+
+    <LinearLayout
+        android:id="@+id/linear_10"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cutline_10" >
+
+        <TextView
+            android:id="@+id/tv_healeh_time"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/healeh_time"
+            android:textColor="#A4A4A4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_healeh_time"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/healeh_time_item"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

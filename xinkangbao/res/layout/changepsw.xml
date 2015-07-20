@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9" >
+
+    <RelativeLayout
+        android:id="@+id/changepsw"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7" >
+
+        <ImageView
+            android:id="@+id/changepsw_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:contentDescription="@string/app_name"
+            android:padding="7dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/changepsw_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:text="@string/changepsw"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/changepsw_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cut_top_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/changepsw"
+        android:layout_marginTop="10dp"
+        android:background="#E0E0E0"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <EditText
+        android:id="@+id/et_ole_psw"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/cut_top_1"
+        android:background="#FFF"
+        android:digits="0123456789abcdefghigklmnopqrstuvwxyz"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:paddingLeft="23dp"
+        android:hint="@string/old_psw"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/cut_bottom_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/et_ole_psw"
+        android:background="#E0E0E0"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <RelativeLayout
+        android:id="@+id/cut_top_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/cut_bottom_1"
+        android:layout_marginTop="10dp"
+        android:background="#E0E0E0"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <EditText
+        android:id="@+id/et_new_psw_1"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/cut_top_2"
+        android:background="#FFF"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:hint="@string/new_psw_1"
+        android:paddingLeft="23dp"
+        android:inputType="textPassword"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/cut_bottom_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/et_new_psw_1"
+        android:background="#E0E0E0"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <RelativeLayout
+        android:id="@+id/cut_top_3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/cut_bottom_2"
+        android:layout_marginTop="10dp"
+        android:background="#E0E0E0"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <EditText
+        android:id="@+id/et_new_psw_2"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/cut_top_3"
+        android:background="#FFF"
+        android:imeOptions="actionGo"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:hint="@string/new_psw_2"
+        android:paddingLeft="23dp"
+        android:inputType="textPassword"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/cut_bottom_3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/et_new_psw_2"
+        android:background="#E0E0E0"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/login_btn"
+        android:padding="10dp" 
+        android:textColor="#FFF"
+        android:text="@string/confirm"
+        android:layout_marginBottom="35dp"/>
+
+</RelativeLayout>

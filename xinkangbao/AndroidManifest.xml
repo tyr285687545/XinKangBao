@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.example.myapp"
+    android:versionCode="4"
+    android:versionName="1.3" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- "org.example.myapp.client.view.DemoApplication" -->
+    <application
+        android:name="org.example.myapp.common.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="QjQ8WPKzzmumGSeTfYxvRaGI" />
+
+        <activity android:name=".client.view.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".client.view.RegisterActivity" />
+        <activity
+            android:name=".client.view.MainActivity"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" />
+        <activity android:name=".client.view.RecentActivity" />
+        <activity android:name=".client.view.BuddyActivity" />
+        <activity android:name=".client.view.Buddy" />
+        <activity android:name=".client.view.GroupActivity" />
+        <activity android:name=".client.view.PublicQuestionList" />
+        <activity android:name=".client.view.TrendsAcitivy" />
+        <activity android:name=".client.view.MoreActivity" />
+        <activity android:name=".client.view.Education" />
+        <activity android:name=".client.view.ChatActivity" />
+        <activity android:name=".client.view.DoctorOrderActivity" />
+        <activity android:name=".client.view.UpdateUserInfoActivity" />
+        <activity android:name=".client.view.UserOrderActivity" />
+        <activity android:name=".client.view.QuestionTagActivity" />
+        <activity android:name=".client.view.QuestionNewActivity" />
+        <activity android:name=".client.view.QuestionPubActivity" />
+        <activity android:name=".client.view.QuestionDetailActivity" />
+        <activity android:name=".client.view.DoctorInfoActivity" />
+        <activity android:name=".client.view.HealthActivity" />
+        <activity android:name=".client.view.MyDoctor" />
+        <activity android:name=".client.view.DoctorService" />
+        <activity android:name=".client.view.PosServiceActivity" />
+        <activity android:name=".client.view.Activity_question" />
+        <activity android:name=".client.view.Myself" />
+        <activity android:name=".client.view.PersonInfo" />
+        <activity android:name=".client.view.Data_change" />
+        <activity android:name=".client.view.ChangePsw" />
+        <activity android:name=".client.view.EducationDeatil" />
+        <activity android:name=".client.view.ActivityHealthData" />
+        <activity android:name=".client.view.HealthDataBaseInfo" />
+        <activity android:name=".client.view.EducationContentChange" />
+        <activity android:name="com.example.myapp.imageloader.SelectPhoto" />
+        <activity android:name="org.example.myapp.client.view.DoctorDetail" >
+        </activity>
+
+        <service android:name=".client.view.BuddyService" >
+        </service>
+        <service android:name=".client.view.ChatService" >
+        </service>
+    </application>
+
+</manifest>

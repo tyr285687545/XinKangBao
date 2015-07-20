@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:id="@+id/person_top"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7" >
+
+        <ImageView
+            android:id="@+id/person_top_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:contentDescription="@string/app_name"
+            android:padding="7dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/person_top_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:text="@string/my"
+            android:textColor="#FFF"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/person_top_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_person_top_head"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_below="@+id/person_top" >
+
+        <TextView
+            android:id="@+id/tv_person_detail_head"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/headpic"
+            android:textColor="#7B7B7B"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/iv_person_detail_head"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/iv_person_detail_head_in"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/persondetail_head" />
+
+        <ImageView
+            android:id="@+id/iv_person_detail_head_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/toright" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cut_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rela_person_top_head"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#C1C1C1" />
+
+    <RelativeLayout
+        android:id="@+id/rela_person_detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@+id/cut_line1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_person_detail_name"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/person_name"
+            android:textColor="#7B7B7B"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_person_detail_show_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_toLeftOf="@+id/iv_person_detail_name_in"
+            android:layout_toRightOf="@+id/tv_person_detail_name" />
+
+        <ImageView
+            android:id="@+id/iv_person_detail_name_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/toright" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cut_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rela_person_detail_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#C1C1C1" />
+
+    <RelativeLayout
+        android:id="@+id/rela_person_detail_sex"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@+id/cut_line2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_person_detail_sex"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/sex"
+            android:textColor="#7B7B7B"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_person_detail_show_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_toLeftOf="@+id/iv_person_detail_sex_in"
+            android:layout_toRightOf="@+id/tv_person_detail_sex" />
+
+        <ImageView
+            android:id="@+id/iv_person_detail_sex_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/toright" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cut_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rela_person_detail_sex"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#C1C1C1" />
+
+    <RelativeLayout
+        android:id="@+id/rela_person_detail_age"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@+id/cut_line3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_person_detail_age"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/age"
+            android:textColor="#7B7B7B"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_person_detail_show_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_toLeftOf="@+id/iv_person_detail_age_in"
+            android:layout_toRightOf="@+id/tv_person_detail_age" />
+
+        <ImageView
+            android:id="@+id/iv_person_detail_age_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/toright" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cut_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rela_person_detail_age"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#C1C1C1" />
+
+    <RelativeLayout
+        android:id="@+id/rela_person_detail_count"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@+id/cut_line4"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_person_detail_count"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/phonenum"
+            android:textColor="#7B7B7B"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_person_detail_show_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_toLeftOf="@+id/iv_person_detail_count_in"
+            android:layout_toRightOf="@+id/tv_person_detail_count"/>
+
+        <ImageView
+            android:id="@+id/iv_person_detail_count_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/toright" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cut_line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rela_person_detail_count"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#C1C1C1" />
+    
+    <RelativeLayout
+        android:id="@+id/rela_person_detail_phonenum"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@+id/cut_line5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_person_detail_phonenum"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/continue_count"
+            android:textColor="#7B7B7B"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_person_detail_show_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/tv_person_detail_phonenum"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cut_line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rela_person_detail_phonenum"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#C1C1C1" />
+
+</RelativeLayout>

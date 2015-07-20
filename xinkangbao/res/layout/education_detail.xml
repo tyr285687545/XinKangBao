@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/education_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/education_detail_head_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/function_menu" />
+
+        <TextView
+            android:id="@+id/education_detail_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/education"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/education_detail_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tonext"
+        android:layout_below="@+id/education_detail_head"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/article_content"
+        android:padding="0.5dp" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_centerHorizontal="true"
+            android:background="#EEFDFF"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/linear_arti_param"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/tv_title"
+            android:background="#F8F8F8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="#565656"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="#565656"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_education_reder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="#565656"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_below="@+id/linear_arti_param" >
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textColor="#141414"
+                android:textSize="14sp" />
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tonext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="22dp" >
+
+        <Button
+            android:id="@+id/btn_on_a"
+            android:layout_width="93dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="50dp"
+            android:gravity="center"
+            android:background="@drawable/article_content"
+            android:text="@string/ona" />
+
+        <Button
+            android:id="@+id/btn_next_article"
+            android:layout_width="93dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:background="@drawable/article_content"
+            android:text="@string/next_article" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/doc_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5px"
+        android:textSize="30px" />
+
+    
+   <LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_toRightOf="@+id/doc_name"
+	    android:background="@drawable/more_item_nor">
+    <TextView
+        android:id="@+id/doc_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25px" />
+
+    <TextView
+        android:id="@+id/doc_apptime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/doc_tel"
+        android:textSize="25px" />
+	</LinearLayout>
+	
+    <ImageButton
+        android:id="@+id/cal_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+</RelativeLayout>

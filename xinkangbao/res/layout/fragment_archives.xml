@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEF9"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/baseinfo"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="#F8F8F9"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_baseinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/base_info"
+                    android:textColor="#333"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/iv_tohealthinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/toright" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cutline_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/baseinfo"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="#E6E6E6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/cutline_1"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="#FFF" >
+
+                <RelativeLayout
+                    android:id="@+id/cutline_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/linear_10"
+                    android:background="#EEEEF9" />
+
+                <!-- 健康信息 -->
+
+                <RelativeLayout
+                    android:id="@+id/healthinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_below="@+id/cutline_11"
+                    android:background="#F8F8F9"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_healthinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/health_info"
+                        android:textColor="#333"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/linear_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/healthinfo" >
+
+                    <TextView
+                        android:id="@+id/tv_healeh_chuyuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="@string/healeh_chuyuan"
+                        android:textColor="#A4A4A4"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_healeh_chuyuan_item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBaseline="@+id/tv_healeh_chuyuan"
+                        android:layout_toRightOf="@+id/tv_healeh_chuyuan"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="#000"
+                        android:textSize="14sp" 
+                        android:layout_marginBottom="5dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cutline_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/linear_11"
+                    android:background="#EEEEF9" />
+                <!-- 治疗用药 -->
+
+                <RelativeLayout
+                    android:id="@+id/linear_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cutline_13" >
+
+                    <TextView
+                        android:id="@+id/tv_healeh_medical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="@string/healeh_medical"
+                        android:textColor="#A4A4A4"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_healeh_medical1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_healeh_medical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_healeh_medical"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cutline_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/linear_12"
+                    android:background="#EEEEF9" />
+                <!-- 基本辅助检查 -->
+
+                <RelativeLayout
+                    android:id="@+id/linear_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cutline_14" >
+
+                    <TextView
+                        android:id="@+id/tv_healeh_checkout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="@string/healeh_checkout"
+                        android:textColor="#A4A4A4"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/et_healeh_checkout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_healeh_checkout"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tv_healeh_checkout"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+                <!-- 检查分析 -->
+
+                <RelativeLayout
+                    android:id="@+id/cutline_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/linear_13"
+                    android:background="#EEEEF9" />
+
+                <RelativeLayout
+                    android:id="@+id/checkout_fenxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cutline_15" >
+
+                    <TextView
+                        android:id="@+id/tv_checkout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="@string/healeh_checkout_fenxi"
+                        android:textColor="#A4A4A4"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_checkout_fenxi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_checkout"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEF9" >
+
+    <RelativeLayout
+        android:id="@+id/healthdata_head"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/healthdata_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/healthdata_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/health_manager"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/healthdata_head_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/healthdata_head"
+        android:layout_marginTop="18dp" >
+
+        <RadioButton
+            android:id="@+id/radiobtn_health_archives"
+            android:layout_width="151dp"
+            android:layout_height="42dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/healthdatabtn_bg"
+            android:button="@null"
+            android:drawableLeft="@drawable/healtharchives"
+            android:gravity="center"
+            android:checked="true"
+            android:paddingLeft="5dp"
+            android:text="@string/health_archives"
+            android:textColor="#FFF"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/radiobtn_health_rate"
+            android:layout_width="151dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/healthrate"
+            android:button="@null"
+            android:drawableLeft="@drawable/rate"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:checked="false"
+            android:text="@string/health_rate"
+            android:textColor="#FFF"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/tobottom_green"
+            android:layout_width="17dp"
+            android:layout_height="9dp"
+            android:layout_alignRight="@+id/radiobtn_health_rate"
+            android:layout_below="@+id/radiobtn_health_rate"
+            android:layout_marginRight="46dp"
+            android:visibility="gone"
+            android:contentDescription="@string/health_rate"
+            android:src="@drawable/green" />
+
+        <ImageView
+            android:id="@+id/tobottom_blue"
+            android:layout_width="17dp"
+            android:layout_height="9dp"
+            android:layout_alignRight="@+id/radiobtn_health_archives"
+            android:layout_below="@+id/radiobtn_health_archives"
+            android:layout_marginRight="46dp"
+            android:contentDescription="@string/health_rate"
+            android:src="@drawable/blue" />
+    </RelativeLayout>
+
+    <FrameLayout 
+        android:id="@+id/health_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rela_switch"/>
+    
+</RelativeLayout>

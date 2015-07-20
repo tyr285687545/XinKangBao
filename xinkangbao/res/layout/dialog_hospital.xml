@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:id="@+id/rela_head"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#F1F1F2">
+        <TextView 
+            android:id="@+id/dialog_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="#1BB2C7"
+            android:layout_centerInParent="true"
+            android:text="@string/hospital"/>
+    </RelativeLayout>
+	<ListView 
+	    android:id="@+id/lv_hospital"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#FFF"
+	    android:layout_below="@+id/rela_head"/>
+</RelativeLayout>

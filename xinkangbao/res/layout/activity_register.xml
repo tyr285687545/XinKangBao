@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg" >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" 
+            android:gravity="center">
+            <TextView 
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textSize="24sp"
+            	android:textColor="#4F4F4F"
+            	android:text="注册 "/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="40dip"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="账号：" />
+            <EditText
+                android:id="@+id/register_account"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+	            android:maxLength="11"
+	            android:textSize="16sp"
+	            android:hint="您的手机号，11位数字"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        
+        
+         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="昵称：" />
+            <EditText
+                android:id="@+id/register_nick"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="姓名或者别名，不能为空"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="密码：" />
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="6到10个字符"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="邮箱：" />
+            <EditText
+                android:id="@+id/register_email"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="您的邮箱"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        
+                <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="住址：" />
+            <EditText
+                android:id="@+id/register_address"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="您的地址"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="年龄：" />
+            <EditText
+                android:id="@+id/register_age"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+	            android:maxLength="3"
+                android:textSize="16sp"
+                android:hint="年龄"
+                android:background="@drawable/input_normal" />
+        </LinearLayout>
+        
+        
+                
+         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="性别：" />
+            <RadioGroup 
+                android:id="@+id/register_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/register_radio_nan"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="男"/>
+	            <RadioButton 
+	                android:id="@+id/register_radio_nv"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="女"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <CheckBox
+                android:id="@+id/register_xieyi_ch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/cb_check"
+                android:textColor="#4F4F4F"
+                android:textSize="16sp"
+                android:text="同意《用户协议》" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/rigister_btn_register"
+                android:layout_width="220dip"
+                android:layout_height="35dip"
+                android:background="@drawable/login_button_nor"
+                android:gravity="center"
+                android:text="注册" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

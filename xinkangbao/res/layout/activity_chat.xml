@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	<ImageView 
+	    android:id="@+id/show_whole_pic"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rala_bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:background="@drawable/widget_head_bg"
+            android:gravity="center"
+            android:orientation="horizontal" >
+	<!-- 
+            <TextView
+                android:id="@+id/chat_top_tel"
+                android:layout_width="150dip"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="12345678901"
+                android:textSize="15sp" />
+ 	-->
+            <TextView
+                android:id="@+id/chat_top_name"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/chat_top_isonline"
+                android:layout_width="50dip"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="在线"
+                android:visibility="gone"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_chat"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rala_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/tabbar_bg_press" >
+
+        <Button 
+            android:id="@+id/btn_send_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="图片"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/ib_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="发送" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_send_pic"
+            android:layout_marginRight="50dip"
+            android:background="@drawable/input_normal"
+            android:hint="输入" >
+        </EditText>
+    </RelativeLayout>
+
+</RelativeLayout>

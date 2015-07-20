@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" 
+    android:id="@+id/health_linelayout">"
+
+    <RelativeLayout
+        android:id="@+id/main_relativelayout_header"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:background="@drawable/widget_head_bg" >
+
+        <TextView
+            android:id="@+id/question_tag_head_title"
+            style="@style/detail_head_title"
+            android:layout_gravity="center"
+            android:text="健康信息" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:background="@drawable/frame_button_p"
+        android:gravity="left|center"
+        android:text="信息汇总"
+        android:textColor="#ffffffff"
+        android:textSize="15.0dip"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1" >
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="MEAN：" />
+
+            <TextView
+                android:id="@+id/id_mean"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="SDNN：" />
+
+            <TextView
+                android:id="@+id/id_sdnn"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="SDANN：" />
+
+            <TextView
+                android:id="@+id/id_sdann"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="SDNNI：" />
+
+            <TextView
+                android:id="@+id/id_sdnni"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="R_MSSD：" />
+
+            <TextView
+                android:id="@+id/id_r_mssd"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:background="@drawable/frame_button_p"
+        android:gravity="left|center"
+        android:text="历史健康信息"
+        android:textColor="#ffffffff"
+        android:textSize="15.0dip"
+        android:textStyle="bold" />
+
+</LinearLayout>

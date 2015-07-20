@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/doctor_education_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#1BB2C7"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/education_head_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/function_menu" />
+
+        <TextView
+            android:id="@+id/education_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/education"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/education_remine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/function_remine" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doctor_education_head" >
+
+        <TextView
+            android:id="@+id/disease_type_tv"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/educatioedit"
+            android:gravity="center"
+            android:hint="查找相关类型文章"
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/tobottom" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontascroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rela_edit"
+        android:layout_marginTop="11dp"
+        android:scrollbars="none" >
+
+        <RadioGroup
+            android:id="@+id/group_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radiobtn_1"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/educaseclct"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="5dp"
+                android:text="@string/recommend"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_2"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/educaseclct"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="5dp"
+                android:text="@string/treatment"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_3"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/educaseclct"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="5dp"
+                android:text="@string/prevention"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_4"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/educaseclct"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="5dp"
+                android:text="@string/education_case"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_5"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/educaseclct"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="5dp"
+                android:text="@string/education_symptom"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_6"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/educaseclct"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="5dp"
+                android:text="@string/diagnosis"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <ListView
+        android:id="@+id/education_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/horizontascroll" />
+
+    <TextView
+        android:id="@+id/education_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:background="@drawable/article_content"
+        android:padding="5dp"
+        android:layout_below="@+id/horizontascroll" />
+
+</RelativeLayout>

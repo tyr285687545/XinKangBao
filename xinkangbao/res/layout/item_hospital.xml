@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="69dp"
+    android:background="#FFF"
+    android:padding="15dp" >
+
+    <TextView
+        android:id="@+id/hospital_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/hospital_item_cb"
+        android:layout_toRightOf="@+id/hospital_item_level"
+        android:text="@string/hospital_name"
+        android:textColor="#2F2F2F"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/hospital_item_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hospital_item_name"
+        android:textColor="#A7A7A7"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/hospital_item_cb"
+        style="@style/checkbox_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</RelativeLayout>

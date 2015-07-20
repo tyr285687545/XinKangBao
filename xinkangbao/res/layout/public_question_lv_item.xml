@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/item_public_lv_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/question"
+        android:layout_centerVertical="true"
+        android:src="@drawable/unreadmsg" />
+
+    <TextView
+        android:id="@+id/item_pulic_lv_item_tv_postname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_public_lv_item_image"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/item_public_lv_item_image"
+        android:textColor="#333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/item_public_lv_item_tv_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_pulic_lv_item_tv_postname"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/item_public_lv_item_image"
+        android:singleLine="true"
+        android:textColor="#999"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/item_public_lv_item_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/item_pulic_lv_item_tv_postname"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="9dp"
+        android:textColor="#B3B3B3"
+        android:textSize="14sp" />
+
+</RelativeLayout>

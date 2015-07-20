@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp" >
+
+    <ImageView
+        android:id="@+id/item_service_image_head"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/doctordefault" />
+
+    <TextView
+        android:id="@+id/item_service_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/item_service_image_head"
+        android:textColor="#191919"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/item_service_tv_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/item_service_tv_name"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/item_service_tv_name"
+        android:singleLine="true"
+        android:textColor="#7D7D7D"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_service_tv_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_service_tv_name"
+        android:layout_below="@+id/item_service_tv_name"
+        android:textColor="#7D7D7D"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_service_tv_indications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_service_tv_hospital"
+        android:layout_below="@+id/item_service_tv_hospital"
+        android:textColor="#7D7D7D"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/item_service_iv_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_service_tv_indications"
+        android:layout_below="@+id/item_service_tv_indications"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ask" />
+    <ImageView
+        android:id="@+id/item_service__iv_commend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_service_tv_indications"
+        android:layout_toRightOf="@+id/item_service_iv_ask"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/commend" />
+    <ImageView
+        android:id="@+id/item_service__iv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_service_tv_indications"
+        android:layout_toRightOf="@+id/item_service__iv_commend"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/add" />
+
+</RelativeLayout>
