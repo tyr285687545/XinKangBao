@@ -125,7 +125,7 @@ public class LoginActivity extends Activity {
 								.getText().toString());
 						editor.commit();
 						dialog = ProgressDialog.show(LoginActivity.this, null,
-								"正在登陆中 …", true, true);
+								"正在登录中 …", true, true);
 						dialog.setCancelable(false);
 						/**
 						 * 异步:登录

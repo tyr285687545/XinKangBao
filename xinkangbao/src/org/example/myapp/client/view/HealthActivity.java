@@ -41,7 +41,24 @@ public class HealthActivity extends Activity {
 	private TextView rmssdTextview;
 	private static DecimalFormat df = new DecimalFormat("######0.00");
 	private LinearLayout health_linelayout;
+	
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.health_manager);
 
+		health_linelayout = (LinearLayout) findViewById(R.id.health_linelayout);
+		meanTextview = (TextView) findViewById(R.id.id_mean);
+		sdnnTextview = (TextView) findViewById(R.id.id_sdnn);
+		sdannTextview = (TextView) findViewById(R.id.id_sdann);
+
+		sdnniTextview = (TextView) findViewById(R.id.id_sdnni);
+		rmssdTextview = (TextView) findViewById(R.id.id_r_mssd);
+
+		ManageActivity.addActiviy("healthActivity", HealthActivity.this);
+		updateInfo();
+	}
+	
 	public void updateInfo() {
 
 		/**
@@ -221,22 +238,5 @@ public class HealthActivity extends Activity {
 			dataset.addSeries(series);
 		}
 		return dataset;
-	}
-
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.health_manager);
-
-		health_linelayout = (LinearLayout) findViewById(R.id.health_linelayout);
-		meanTextview = (TextView) findViewById(R.id.id_mean);
-		sdnnTextview = (TextView) findViewById(R.id.id_sdnn);
-		sdannTextview = (TextView) findViewById(R.id.id_sdann);
-
-		sdnniTextview = (TextView) findViewById(R.id.id_sdnni);
-		rmssdTextview = (TextView) findViewById(R.id.id_r_mssd);
-
-		ManageActivity.addActiviy("healthActivity", HealthActivity.this);
-		updateInfo();
 	}
 }

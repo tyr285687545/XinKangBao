@@ -190,10 +190,13 @@
     <string name="week">近一周</string>
     <string name="month">近一月</string>
     <string name="fenxi">· 心率分析 ·</string>
+    <string name="data">· 心率数据 ·</string>
     <string name="tongji">· 心率统计 ·</string>
-    <string name="param1">参数一:</string>
-    <string name="param2">参数二:</string>
-    <string name="param3">参数三:</string>
+    <string name="param1">MEAN:</string>
+    <string name="param2">SDNN:</string>
+    <string name="param3">SDANN:</string>
+    <string name="param4">SDNNI:</string>
+    <string name="param5">R_MSSD:</string>
     <string name="maibo_in_onemin">一分钟脉搏次数</string>
     <string name="data1">=&lt;50</string>
     <string name="data2">50~60</string>

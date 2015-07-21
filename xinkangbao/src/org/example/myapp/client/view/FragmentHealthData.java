@@ -25,7 +25,7 @@ public class FragmentHealthData extends Fragment {
 	private ArchivesBean archivesBean;
 
 	private RelativeLayout baseinfo;
-
+	private boolean isShow = true;
 	private TextView tv_install_disease_type;
 	private TextView tv_health_checkout;
 	private TextView tv_healeh_medical1;
@@ -40,9 +40,7 @@ public class FragmentHealthData extends Fragment {
 		} else {
 			archivesBean = AppContext.getInstance().getBean();
 		}
-		Log.v("sky", "here");
-		Log.v("sky",
-				"archivesBean.getMedicine() = " + archivesBean.getMedicine());
+		isShow = bundle.getBoolean("isShow");
 		return view;
 	}
 
@@ -74,7 +72,6 @@ public class FragmentHealthData extends Fragment {
 		// 因为对象archivesBean中的sick和medical是数组，这里需要再次解析一次。
 		try {
 			JSONArray sickArray = new JSONArray(archivesBean.getSick());
-			Log.v("sky", "sickArray.length() = " + sickArray.length());
 			for (int i = 0; i < sickArray.length(); i++) {
 				sickStr.append(sickArray.get(i) + "\n");
 			}

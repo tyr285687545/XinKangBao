@@ -4,6 +4,8 @@ import org.example.myapp.R;
 import org.example.myapp.client.model.ArchivesBean;
 import org.example.myapp.common.AppContext;
 
+import com.baidu.a.a.a.b;
+
 import android.R.bool;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -18,6 +20,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 
 public class ActivityHealthData extends FragmentActivity {
 
@@ -40,8 +43,13 @@ public class ActivityHealthData extends FragmentActivity {
 		setContentView(R.layout.healthdata);
 		Bundle bundle = this.getIntent().getExtras();
 		// 健康数据传个boolean标识, 辨别是健康档案还是健康数据
-		// 单纯是用来设置左上角的返回和进入个人信息界面隐藏或显示的标识.
-		isBack = getIntent().getBooleanExtra("isBack", false);
+		
+		// 用来设置左上角的返回/进入个人信息界面隐藏或显示的标识.
+		isBack = getIntent().getBooleanExtra("isShow", false);
+		
+		Log.d("sky", "拿到从Buddy传过来isBack = "+(getIntent().getBooleanExtra("isShow", false)));
+		Log.d("sky", "拿到从Buddy传过来isBack = "+isBack);
+		
 		initView();
 		if (bundle == null) {
 			new getInfo().execute("");
@@ -54,10 +62,12 @@ public class ActivityHealthData extends FragmentActivity {
 					.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 
 			FragmentHealthData firstFragment = new FragmentHealthData();
-
+			
 			// 将数据传到Fragment中
 			bundle.putSerializable("info", archivesBean);
-
+			
+			bundle.putBoolean("isShow", isBack);
+			
 			firstFragment.setArguments(bundle);
 
 			transaction.replace(R.id.health_fragment, firstFragment);
@@ -67,7 +77,8 @@ public class ActivityHealthData extends FragmentActivity {
 
 	}
 
-	private void initView() {
+	private void initView() 
+	{
 		radiobtn_archives = (RadioButton) findViewById(R.id.radiobtn_health_archives);
 		radiobtn_rate = (RadioButton) findViewById(R.id.radiobtn_health_rate);
 		iv_archives = (ImageView) findViewById(R.id.tobottom_blue);
@@ -91,9 +102,11 @@ public class ActivityHealthData extends FragmentActivity {
 					Bundle bundle = new Bundle();
 					if (archivesBean == null) {
 						bundle.putSerializable("info", archives);
+						bundle.putBoolean("isShow", isBack);
 						firstFragment.setArguments(bundle);
 					} else {
 						bundle.putSerializable("info", archivesBean);
+						bundle.putBoolean("isShow", isBack);
 						firstFragment.setArguments(bundle);
 					}
 
@@ -122,7 +135,13 @@ public class ActivityHealthData extends FragmentActivity {
 							.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 
 					FragmentHearthRateInfo hearthRateInfo = new FragmentHearthRateInfo();
-
+					
+					Bundle bundle = new Bundle();
+					
+					bundle.putBoolean("isShow", isBack);
+					
+					hearthRateInfo.setArguments(bundle);
+					
 					transaction.replace(R.id.health_fragment, hearthRateInfo);
 
 					transaction.commit();
@@ -138,10 +157,14 @@ public class ActivityHealthData extends FragmentActivity {
 		});
 		healthdata_head_menu = (ImageView) findViewById(R.id.healthdata_head_menu);
 		healthdata_head_back = (ImageView) findViewById(R.id.healthdata_head_back);
-		if (isBack) {
+		if (isBack) 
+		{
+			//健康数据
 			healthdata_head_menu.setVisibility(View.GONE);
 			healthdata_head_back.setVisibility(View.VISIBLE);
+			radiobtn_rate.setText("心率信息");
 		} else {
+			//健康管理
 			healthdata_head_back.setVisibility(View.GONE);
 			healthdata_head_menu.setVisibility(View.VISIBLE);
 		}
@@ -174,7 +197,9 @@ public class ActivityHealthData extends FragmentActivity {
 		}
 
 		@Override
-		protected Object doInBackground(Object... params) {
+		protected Object doInBackground(Object... params) 
+		{
+			//获取档案信息
 			archives = LoginActivity.new_http_client.getArchives(Long
 					.parseLong(LoginActivity.mySharedPreferences.getString(
 							"current_login_tel", "")));

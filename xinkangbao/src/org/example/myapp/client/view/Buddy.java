@@ -57,7 +57,7 @@ public class Buddy extends FragmentActivity {
 
 	private ImageView iv;
 
-	private TextView iv_health_rate;
+	private TextView iv_health_rate;//½¡¿µÊý¾Ý
 
 	private BannerLayout bannerLayout;
 
@@ -127,9 +127,13 @@ public class Buddy extends FragmentActivity {
 
 		ManageActivity.addActiviy("buddyActivity", Buddy.this);
 		bannerLayout = (BannerLayout) findViewById(R.id.function_banner);
+		
 		new AsyncCheckVersion().execute("");
+		
 		initView();
+		
 		initFrameListView();
+		
 		LoadDocList(curDocCatalog);
 //		new getArchives().execute("");
 
@@ -453,6 +457,7 @@ public class Buddy extends FragmentActivity {
 		protected Object doInBackground(Object... params) {
 			archives = LoginActivity.new_http_client.getArchives(Long.parseLong(LoginActivity.mySharedPreferences.getString("current_login_tel", "")));
 			bundle.putSerializable("patient", archives);
+			bundle.putBoolean("isShow", true);
 			intent.putExtras(bundle);
 			return null;
 		}
