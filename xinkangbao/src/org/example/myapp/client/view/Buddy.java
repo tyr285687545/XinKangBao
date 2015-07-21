@@ -446,12 +446,12 @@ public class Buddy extends FragmentActivity {
 			getArchivesDataDialog.setCancelable(false);
 			getArchivesDataDialog.show();
 			intent = new Intent(Buddy.this, ActivityHealthData.class);
+			intent.putExtra("isBack", true);
 		}
 		
 		@Override
 		protected Object doInBackground(Object... params) {
 			archives = LoginActivity.new_http_client.getArchives(Long.parseLong(LoginActivity.mySharedPreferences.getString("current_login_tel", "")));
-			Log.e("sky", "Buddy传到健康数据 == null? "+(archives == null));
 			bundle.putSerializable("patient", archives);
 			intent.putExtras(bundle);
 			return null;

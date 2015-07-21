@@ -40,7 +40,6 @@ public class MyAppConfig {
 	//更新用户的信息
 	public static final String USER_UPDATE_INFO_URL = "http://rj17701.sinaapp.com/index.php/patient/update";
 			
-	
 	//给某一个医生发送信息，先不分在线还是离线
 	public static final String USER_SEND_MSG_TO_DOC_URL = "http://rj17701.sinaapp.com/index.php/chatmessage/send";
 	

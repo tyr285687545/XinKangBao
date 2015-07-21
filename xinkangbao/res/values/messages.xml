@@ -185,5 +185,25 @@
     <string name="nodata">没有数据</string>
     <string name="healeh_checkout_fenxi">检查分析:</string>
     <string name="persondata">个人信息</string>
-    
+    <!-- 心率信息 -->
+    <string name="day">近一天</string>
+    <string name="week">近一周</string>
+    <string name="month">近一月</string>
+    <string name="fenxi">· 心率分析 ·</string>
+    <string name="tongji">· 心率统计 ·</string>
+    <string name="param1">参数一:</string>
+    <string name="param2">参数二:</string>
+    <string name="param3">参数三:</string>
+    <string name="maibo_in_onemin">一分钟脉搏次数</string>
+    <string name="data1">=&lt;50</string>
+    <string name="data2">50~60</string>
+    <string name="data3">60~80</string>
+    <string name="data4">80~100</string>
+    <string name="data5">100~110</string>
+    <string name="data6">110~120</string>
+    <string name="data7">>=200</string>
+    <string name="time">时间</string>
+    <string name="number">数值</string>
+    <string name="time_1">2015&#8211;05&#8211;21</string>
+    <string name="time_2">2015&#8211;05&#8211;21</string>
 </resources>

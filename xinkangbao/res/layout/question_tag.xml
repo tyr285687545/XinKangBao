@@ -32,7 +32,6 @@
             android:id="@+id/question_tag_head_progress"
             style="@style/loading_small"
             android:layout_gravity="end|center"
-            android:layout_marginEnd="5dip"
             android:layout_marginRight="5dip" />
     </FrameLayout>
 

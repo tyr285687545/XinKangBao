@@ -15,6 +15,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -256,32 +257,33 @@ public class EducationContentChange extends Activity implements OnClickListener 
 				AppContext.getInstance().setArticles(articles_sort);
 			}
 			break;
-		case R.id.radiobtn_2:// 诊断
+		case R.id.radiobtn_2:// 治疗
 			String user_choose_type_2 = (String) radio_2.getText();
 			articles_sort.clear();
 			content = null;
 			// 进行二级筛选
-			if (articles_type.size() > 0) {
-				for (int i = 0; i < articles_type.size(); i++) {
-					if (articles_type.get(i).getSort()
-							.equals(user_choose_type_2)) {
-						articles_sort.add(articles_type.get(i));
-						content = articles_type.get(i).getContent();
-						bundle.putString("text", content);
-					}
-				}
-				lv_list.setVisibility(View.GONE);
-				tv_content.setVisibility(View.VISIBLE);
-				if (content == null) {
-					setText("抱歉暂无相关文章!");
-					tv_content.setGravity(Gravity.CENTER);
-				} else {
-					tv_content.setGravity(Gravity.LEFT);
-					setText(content);
+			// 进行二级筛选
+			for (int i = 0; i < articles_type.size(); i++) {
+				if (articles_type.get(i).getSort().equals(user_choose_type_2)) {
+					articles_sort.add(articles_type.get(i));
 				}
 			}
+			if (articles_sort.size() == 0) {
+
+				lv_list.setVisibility(View.GONE);
+
+				tv_content.setVisibility(View.VISIBLE);
+
+				tv_content.setText("抱歉,暂无预防文章!");
+			} else {
+				tv_content.setVisibility(View.GONE);
+
+				lv_list.setVisibility(View.VISIBLE);
+				setList(articles_sort);
+				AppContext.getInstance().setArticles(articles_sort);
+			}
 			break;
-		case R.id.radiobtn_3:// 治疗
+		case R.id.radiobtn_3:// 预防
 			String user_choose_type_3 = (String) radio_3.getText();
 			if (articles_sort.size() > 0) {
 				articles_sort.clear();
@@ -306,36 +308,37 @@ public class EducationContentChange extends Activity implements OnClickListener 
 				AppContext.getInstance().setArticles(articles_sort);
 			}
 			break;
-		case R.id.radiobtn_4:// 预防
+		case R.id.radiobtn_4:// 定义
 			String user_choose_type_4 = (String) radio_4.getText();
 			articles_sort.clear();
 			// 进行二级筛选
-			for (int i = 0; i < articles_type.size(); i++) {
-				if (articles_type.get(i).getSort().equals(user_choose_type_4)) {
-					articles_sort.add(articles_type.get(i));
+			if (articles_type.size() > 0) {
+				for (int i = 0; i < articles_type.size(); i++) {
+					if (articles_type.get(i).getSort()
+							.equals(user_choose_type_4)) {
+						articles_sort.add(articles_type.get(i));
+						content = articles_type.get(i).getContent();
+						bundle.putString("text", content);
+					}
+				}
+				lv_list.setVisibility(View.GONE);
+				tv_content.setVisibility(View.VISIBLE);
+				if (content == null) {
+					setText("抱歉暂无相关文章!");
+					tv_content.setGravity(Gravity.CENTER);
+				} else {
+					tv_content.setGravity(Gravity.LEFT);
+					setText(content);
 				}
 			}
-			if (articles_sort.size() == 0) {
-
-				lv_list.setVisibility(View.GONE);
-
-				tv_content.setVisibility(View.VISIBLE);
-
-				tv_content.setText("抱歉,暂无预防文章!");
-			} else {
-				tv_content.setVisibility(View.GONE);
-
-				lv_list.setVisibility(View.VISIBLE);
-				setList(articles_sort);
-				AppContext.getInstance().setArticles(articles_sort);
-			}
 			break;
-		case R.id.radiobtn_5:// 定义
+		case R.id.radiobtn_5:// 症状
 			String user_choose_type_5 = (String) radio_5.getText();
 			articles_sort.clear();
 			content = null;
 			// 进行二级筛选
 			if (articles_type.size() > 0) {
+				Log.d("sky", "articles_type.size() > 0");
 				for (int i = 0; i < articles_type.size(); i++) {
 					if (articles_type.get(i).getSort()
 							.equals(user_choose_type_5)) {
@@ -356,7 +359,7 @@ public class EducationContentChange extends Activity implements OnClickListener 
 				}
 			}
 			break;
-		case R.id.radiobtn_6:// 症状
+		case R.id.radiobtn_6:// 诊断
 			String user_choose_type_6 = (String) radio_6.getText();
 			articles_sort.clear();
 			content = null;
