@@ -33,6 +33,7 @@ import org.example.myapp.common.ReturnObj;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.R.integer;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.StrictMode;
@@ -1230,5 +1231,39 @@ public class YQClient {
 			e.printStackTrace();
 		}
 		return archives;
+	}
+	
+	public List<String> getHeartBeat(long id)
+	{
+		String str = "";
+		List<String> list = new ArrayList<String>();
+		try {
+			HttpClient httpClient = new DefaultHttpClient();
+			HttpGet httpGet = new HttpGet(MyAppConfig.GET_ONE_MINUTE_HEARTBEAT+"/"+id+"/50");
+			HttpResponse httpResponse = httpClient.execute(httpGet);
+			InputStream inputStream = httpResponse.getEntity().getContent();
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					inputStream));
+			String line = "";
+			while (null != (line = reader.readLine())) {
+				str += line;
+			}
+			JSONObject jsonObject = new JSONObject(str);
+			String item1 = jsonObject.getString("list_1");
+			String item2 = jsonObject.getString("list_2");
+			String item3 = jsonObject.getString("list_3");
+			String item4 = jsonObject.getString("list_4");
+			String item5 = jsonObject.getString("list_5");
+			list.add(item1);
+			list.add(item2);
+			list.add(item3);
+			list.add(item4);
+			list.add(item5);
+		} catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		return list;
+	
 	}
 }

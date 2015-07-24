@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEF9"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp"
+    android:scrollbars="none"
+    android:paddingTop="11dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rela_rate_fenxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp" >
+
+            <RelativeLayout
+                android:id="@+id/rela_rate_fenxi_title"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="#AAE5F4" >
+
+                <TextView
+                    android:id="@+id/tv_rate_fenxi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/fenxi"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_param_1"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_below="@+id/rela_rate_fenxi_title"
+                android:background="#FFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_param_1_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="@string/param1"
+                    android:textColor="#A4A4A4"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_param_mean"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="8"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/cut_line_rate_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/linear_param_1"
+                android:background="#E6E6E6" />
+
+            <LinearLayout
+                android:id="@+id/linear_param_2"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_below="@+id/cut_line_rate_1"
+                android:background="#FFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_param_2_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="@string/param2"
+                    android:textColor="#A4A4A4"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_param_sdnn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="8"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/cut_line_rate_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/linear_param_2"
+                android:background="#E6E6E6" />
+
+            <LinearLayout
+                android:id="@+id/linear_param_3"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_below="@+id/cut_line_rate_2"
+                android:background="#FFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_param_3_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="@string/param3"
+                    android:textColor="#A4A4A4"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_param_sdann"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="8"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/cut_line_rate_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/linear_param_3"
+                android:background="#E6E6E6" />
+
+            <LinearLayout
+                android:id="@+id/linear_param_4"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_below="@+id/cut_line_rate_3"
+                android:background="#FFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_param_4_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="@string/param4"
+                    android:textColor="#A4A4A4"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_param_sdnni"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="8"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/cut_line_rate_4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/linear_param_4"
+                android:background="#E6E6E6" />
+
+            <LinearLayout
+                android:id="@+id/linear_param_5"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_below="@+id/cut_line_rate_4"
+                android:background="#FFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_param_5_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/param5"
+                    android:textColor="#A4A4A4"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_param_rmssd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="8"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_rate_pic_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_rate_fenxi"
+            android:layout_marginTop="13dp" >
+
+            <TextView
+                android:id="@+id/table_title"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="#d0f4aa"
+                android:gravity="center"
+                android:text="@string/history_data"
+                android:textColor="#000"
+                android:textSize="18sp" />
+            <RelativeLayout 
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_below="@+id/table_title">
+                
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_rate_two_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_rate_pic_title"
+            android:layout_marginTop="13dp" >
+
+            <TextView
+                android:id="@+id/tv_just_for_id"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="#F4DEAA"
+                android:gravity="center"
+                android:text="@string/two_week_rate"
+                android:textColor="#000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/daytime"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignLeft="@+id/rela_rate_two_week"
+            android:layout_below="@+id/rela_rate_two_week"
+            android:background="#FFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_daytime"
+                android:layout_width="35dp"
+                android:layout_height="24dp"
+                android:background="@drawable/two_week"
+                android:text="@string/daytime"
+                android:textColor="#FFF"
+                android:layout_marginLeft="5dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_daytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:text="@string/xiaoyu"
+                android:textColor="#A4A4A4"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/et_daytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="2"
+                android:text="@string/comnum"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_daytime_dayu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:text="@string/dayu"
+                android:textColor="#A4A4A4"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/et_daytime_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="2"
+                android:text="@string/comnum"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/night"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignLeft="@+id/rela_rate_two_week"
+            android:layout_below="@+id/daytime"
+            android:background="#FFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_night"
+                android:layout_width="35dp"
+                android:layout_height="24dp"
+                android:background="@drawable/two_week"
+                android:layout_marginLeft="5dp"
+                android:text="@string/night"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:text="@string/xiaoyu"
+                android:textColor="#A4A4A4"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/et_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="2"
+                android:text="@string/comnum"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_night_dayu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:text="@string/dayu"
+                android:textColor="#A4A4A4"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/et_night_dayu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="2"
+                android:text="@string/comnum"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

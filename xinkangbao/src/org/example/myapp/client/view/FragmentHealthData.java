@@ -81,20 +81,20 @@ public class FragmentHealthData extends Fragment {
 			}
 			JSONObject FzjcJson = new JSONObject(archivesBean.getFzjc());
 			if (FzjcJson.toString().length() > 2) {
-				fzjcStr.append("血压:	" + FzjcJson.getString("血压") + "\n");
-				fzjcStr.append("心率:	" + FzjcJson.getString("心率") + "\n");
-				fzjcStr.append("血红蛋白:	" + FzjcJson.getString("血红蛋白") + "\n");
-				fzjcStr.append("空腹血糖:	" + FzjcJson.getString("空腹血糖") + "\n");
-				fzjcStr.append("甘油三酯:	" + FzjcJson.getString("甘油三酯") + "\n");
-				fzjcStr.append("总胆固醇:	" + FzjcJson.getString("总胆固醇") + "\n");
-				fzjcStr.append("低密度脂蛋白:	" + FzjcJson.getString("低密度脂蛋白") + "\n");
-				fzjcStr.append("高密度脂蛋白血压:	" + FzjcJson.getString("高密度脂蛋白")
+				fzjcStr.append("血压:		" + FzjcJson.getString("血压") + "\n");
+				fzjcStr.append("心率:		" + FzjcJson.getString("心率") + "\n");
+				fzjcStr.append("血红蛋白:		" + FzjcJson.getString("血红蛋白") + "\n");
+				fzjcStr.append("空腹血糖:		" + FzjcJson.getString("空腹血糖") + "\n");
+				fzjcStr.append("甘油三酯:		" + FzjcJson.getString("甘油三酯") + "\n");
+				fzjcStr.append("总胆固醇:		" + FzjcJson.getString("总胆固醇") + "\n");
+				fzjcStr.append("低密度脂蛋白:		" + FzjcJson.getString("低密度脂蛋白") + "\n");
+				fzjcStr.append("高密度脂蛋白血压:		" + FzjcJson.getString("高密度脂蛋白")
 						+ "\n");
-				fzjcStr.append("NT-βoBNP:	" + FzjcJson.getString("NT-βoBNP")
+				fzjcStr.append("NT-βoBNP:		" + FzjcJson.getString("NT-βoBNP")
 						+ "\n");
-				fzjcStr.append("谷丙转氨酶:	" + FzjcJson.getString("谷丙转氨酶") + "\n");
-				fzjcStr.append("肌酐:	" + FzjcJson.getString("肌酐") + "\n");
-				fzjcStr.append("心脏彩超射血分值:	" + FzjcJson.getString("心脏彩超射血分值")
+				fzjcStr.append("谷丙转氨酶:		" + FzjcJson.getString("谷丙转氨酶") + "\n");
+				fzjcStr.append("肌酐:		" + FzjcJson.getString("肌酐") + "\n");
+				fzjcStr.append("心脏彩超射血分值:		" + FzjcJson.getString("心脏彩超射血分值")
 						+ "\n");
 			}
 		} catch (Exception e) {

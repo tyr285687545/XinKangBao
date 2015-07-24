@@ -1,5 +1,7 @@
 package org.example.myapp.client.view;
 
+import java.util.List;
+
 import org.example.myapp.R;
 import org.example.myapp.client.model.ArchivesBean;
 import org.example.myapp.common.AppContext;
@@ -35,6 +37,8 @@ public class ActivityHealthData extends FragmentActivity {
 	private ArchivesBean archivesBean;
 	private ArchivesBean archives;
 	private boolean isBack = false;
+//	private List<String> heartBeatCount;
+
 	FragmentHealthData firstFragment = new FragmentHealthData();
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +47,10 @@ public class ActivityHealthData extends FragmentActivity {
 		setContentView(R.layout.healthdata);
 		Bundle bundle = this.getIntent().getExtras();
 		// 健康数据传个boolean标识, 辨别是健康档案还是健康数据
-		
+
 		// 用来设置左上角的返回/进入个人信息界面隐藏或显示的标识.
 		isBack = getIntent().getBooleanExtra("isShow", false);
-		
-		Log.d("sky", "拿到从Buddy传过来isBack = "+(getIntent().getBooleanExtra("isShow", false)));
-		Log.d("sky", "拿到从Buddy传过来isBack = "+isBack);
-		
+		new getHeartBeat().execute("");
 		initView();
 		if (bundle == null) {
 			new getInfo().execute("");
@@ -62,12 +63,12 @@ public class ActivityHealthData extends FragmentActivity {
 					.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 
 			FragmentHealthData firstFragment = new FragmentHealthData();
-			
+
 			// 将数据传到Fragment中
 			bundle.putSerializable("info", archivesBean);
-			
+
 			bundle.putBoolean("isShow", isBack);
-			
+
 			firstFragment.setArguments(bundle);
 
 			transaction.replace(R.id.health_fragment, firstFragment);
@@ -77,8 +78,7 @@ public class ActivityHealthData extends FragmentActivity {
 
 	}
 
-	private void initView() 
-	{
+	private void initView() {
 		radiobtn_archives = (RadioButton) findViewById(R.id.radiobtn_health_archives);
 		radiobtn_rate = (RadioButton) findViewById(R.id.radiobtn_health_rate);
 		iv_archives = (ImageView) findViewById(R.id.tobottom_blue);
@@ -122,8 +122,10 @@ public class ActivityHealthData extends FragmentActivity {
 
 			}
 		});
-		radiobtn_rate.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
+		radiobtn_rate.setOnClickListener(new OnClickListener() 
+		{
+			public void onClick(View v) 
+			{
 				if (radiobtn_rate.isChecked()) {
 					// 设置心率信息三角显示
 					iv_rate.setVisibility(View.VISIBLE);
@@ -134,37 +136,51 @@ public class ActivityHealthData extends FragmentActivity {
 					transaction
 							.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 
-					FragmentHearthRateInfo hearthRateInfo = new FragmentHearthRateInfo();
-					
-					Bundle bundle = new Bundle();
-					
-					bundle.putBoolean("isShow", isBack);
-					
-					hearthRateInfo.setArguments(bundle);
-					
-					transaction.replace(R.id.health_fragment, hearthRateInfo);
-
-					transaction.commit();
+					if (isBack) {
+						
+						FragmentHeartRateDate rateDate = new FragmentHeartRateDate();
+						
+						Bundle bundle = new Bundle();
+						
+						bundle.putBoolean("isShow", isBack);
+						
+						rateDate.setArguments(bundle);
+						
+						transaction.replace(R.id.health_fragment, rateDate);
+						
+						transaction.commit();
+					}else {
+						
+						FragmentHearthRateInfo hearthRateInfo = new FragmentHearthRateInfo();
+						
+						Bundle bundle = new Bundle();
+						
+						bundle.putBoolean("isShow", isBack);
+						
+						hearthRateInfo.setArguments(bundle);
+						
+						transaction.replace(R.id.health_fragment, hearthRateInfo);
+						
+						transaction.commit();
+					}
 				} else {
 					// 设置健康档案三角显示
 					iv_rate.setVisibility(View.GONE);
 					// 设置心率信息三角隐藏
 					iv_archives.setVisibility(View.VISIBLE);
-
 				}
 
 			}
 		});
 		healthdata_head_menu = (ImageView) findViewById(R.id.healthdata_head_menu);
 		healthdata_head_back = (ImageView) findViewById(R.id.healthdata_head_back);
-		if (isBack) 
-		{
-			//健康数据
+		if (isBack) {
+			// 健康数据
 			healthdata_head_menu.setVisibility(View.GONE);
 			healthdata_head_back.setVisibility(View.VISIBLE);
 			radiobtn_rate.setText("心率信息");
 		} else {
-			//健康管理
+			// 健康管理
 			healthdata_head_back.setVisibility(View.GONE);
 			healthdata_head_menu.setVisibility(View.VISIBLE);
 		}
@@ -197,9 +213,8 @@ public class ActivityHealthData extends FragmentActivity {
 		}
 
 		@Override
-		protected Object doInBackground(Object... params) 
-		{
-			//获取档案信息
+		protected Object doInBackground(Object... params) {
+			// 获取档案信息
 			archives = LoginActivity.new_http_client.getArchives(Long
 					.parseLong(LoginActivity.mySharedPreferences.getString(
 							"current_login_tel", "")));
@@ -229,6 +244,34 @@ public class ActivityHealthData extends FragmentActivity {
 
 			transaction.commit();
 		}
+	}
 
+	class getHeartBeat extends AsyncTask {
+		ProgressDialog getHeartBeatDialog = new ProgressDialog(
+				ActivityHealthData.this);
+
+		@Override
+		protected void onPreExecute() {
+			getHeartBeatDialog.setMessage("请稍等,正在获取心率信息...");
+			getHeartBeatDialog.show();
+			super.onPreExecute();
+
+		}
+
+		@Override
+		protected Object doInBackground(Object... params) {
+			AppContext.getInstance().setHeartBeatOneMin(
+					LoginActivity.new_http_client.getHeartBeat(Long
+							.valueOf(LoginActivity.mySharedPreferences
+									.getString("current_login_tel", ""))));
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(Object result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			getHeartBeatDialog.dismiss();
+		}
 	}
 }

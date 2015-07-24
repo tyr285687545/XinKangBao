@@ -82,7 +82,7 @@ public class Position {
 					 * */
 					url = "http://api.map.baidu.com/geoconv/v1/?coords="
 							+ final_lon + "," + final_lat
-							+ "&from=3&to=5&ak=Mk0gw9sjtR2m0zx1wkmHMPgU";
+							+ "&from=1&to=5&ak=Mk0gw9sjtR2m0zx1wkmHMPgU";
 					// url = url.replaceAll(" ", "%20");
 					try {
 						HttpClient httpClient = new DefaultHttpClient();

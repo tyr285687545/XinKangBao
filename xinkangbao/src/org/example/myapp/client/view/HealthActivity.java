@@ -61,12 +61,6 @@ public class HealthActivity extends Activity {
 	
 	public void updateInfo() {
 
-		/**
-		 * TextView trends=(TextView) findViewById(R.id.trends_more);
-		 */
-		// avatar.setImageResource(ChatActivity.avatar[me.getAvatar()]);
-//		ReturnObj ret = MainActivity.client_in_strict_mode
-//				.get_patient_health_stat(MainActivity.myUser.getId());
 		if (LoginActivity.ret.getRet_code() == 0) {
 			HealthStat healthStat = HealthStat.jiexi_by_str(LoginActivity.ret.getOrg_str());
 			if (healthStat != null) {
@@ -80,26 +74,28 @@ public class HealthActivity extends Activity {
 			Toast.makeText(HealthActivity.this, "获取健康信息失败：  " + LoginActivity.ret.getMsg(),
 					Toast.LENGTH_SHORT).show();
 		}
+		addView();
+	}
 
-//		LoginActivity.ret = MainActivity.client_in_strict_mode
-//				.get_patient_heartrate_list(MainActivity.myUser.getId());
+	private void addView()
+	{
 		if (LoginActivity.user_ret.getRet_code() == 0) {
 			HeartRateList heartList = HeartRateList.parse(LoginActivity.user_ret.getOrg_str());
 			List<HeartRate> list = heartList.getHeartRateList();
 			int heartlistsize = list.size();
-
+			
 			if (heartlistsize != 0) 
 			{
 				// 柱状图的两个序列的名字
 				health_linelayout.addView(xychar(list, heartlistsize));
-
+				
 			}
 		} else {
 			Toast.makeText(HealthActivity.this, "获取健康信息失败：  " + LoginActivity.user_ret.getMsg(),
 					Toast.LENGTH_SHORT).show();
 		}
-	}
 
+	}
 	public GraphicalView xychar(List<HeartRate> list, int heartlistsize) {
 		int i = 0;
 		String[] titles = new String[] { "心跳" };

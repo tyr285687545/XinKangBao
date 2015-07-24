@@ -6,6 +6,7 @@ import org.example.myapp.common.StringUtils;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -20,6 +21,7 @@ public class Myself extends Activity {
 	private RelativeLayout layoutMyDoc;
 	private RelativeLayout layoutManager;
 	private RelativeLayout layoutChangePsw;
+	private RelativeLayout layoutMapService;
 	private Button btnOutLoad;
 	private ImageView ivToDetail;
 	private ImageView ivHead;
@@ -45,7 +47,9 @@ public class Myself extends Activity {
 		layoutMyDoc = (RelativeLayout) this.findViewById(R.id.item_2);
 		layoutManager = (RelativeLayout) this.findViewById(R.id.item_3);
 		layoutChangePsw = (RelativeLayout) this.findViewById(R.id.item_4);
+		layoutMapService = (RelativeLayout) this.findViewById(R.id.item_5);
 
+		
 		tvUserName = (TextView) this.findViewById(R.id.tv_name);
 		tvNumber = (TextView) this.findViewById(R.id.tv_phone);
 
@@ -108,6 +112,14 @@ public class Myself extends Activity {
 
 			public void onClick(View v) {
 				Intent intent = new Intent(Myself.this, ChangePsw.class);
+				startActivity(intent);
+			}
+		});
+		// Î»ÖÃ·þÎñ
+		layoutMapService.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent intent = new Intent(Myself.this, PosServiceActivity.class);
 				startActivity(intent);
 			}
 		});

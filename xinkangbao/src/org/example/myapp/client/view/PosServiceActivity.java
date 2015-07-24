@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -50,11 +51,12 @@ public class PosServiceActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_geometry);
-		// ≥ı ºªØµÿÕº
-		SDKInitializer.initialize(this);
-		mMapView = (MapView) findViewById(R.id.bmapView);
 		
+		setContentView(R.layout.activity_geometry);
+		
+		SDKInitializer.initialize(getApplicationContext());
+		
+		mMapView = (MapView) findViewById(R.id.bmapView);
 		
 		mBaiduMap = mMapView.getMap();
 		Position pos = get_pat_pos();

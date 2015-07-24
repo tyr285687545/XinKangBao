@@ -129,6 +129,7 @@
     <string name="myappoin">我的预约</string>
     <string name="manager">终端管理</string>
     <string name="changepsw">修改密码</string>
+    <string name="mapservice">位置信息</string>
     <string name="outloading">退出登录</string>
     <string name="person_name">姓名</string>
     <string name="headpic">头像</string>
@@ -192,19 +193,25 @@
     <string name="fenxi">· 心率分析 ·</string>
     <string name="data">· 心率数据 ·</string>
     <string name="tongji">· 心率统计 ·</string>
+    <string name="history_data">· 历史心率数据 ·</string>
+    <string name="two_week_rate">· 近两周心率 ·</string>
+    <string name="xiaoyu">心率=&lt;45:</string>
+    <string name="dayu">心率>=200:</string>
+    <string name="daytime">白天</string>
+    <string name="night">夜间</string>
     <string name="param1">MEAN:</string>
     <string name="param2">SDNN:</string>
     <string name="param3">SDANN:</string>
     <string name="param4">SDNNI:</string>
     <string name="param5">R_MSSD:</string>
     <string name="maibo_in_onemin">一分钟脉搏次数</string>
-    <string name="data1">=&lt;50</string>
-    <string name="data2">50~60</string>
-    <string name="data3">60~80</string>
-    <string name="data4">80~100</string>
-    <string name="data5">100~110</string>
-    <string name="data6">110~120</string>
-    <string name="data7">>=200</string>
+    <string name="data1">=&lt;50:</string>
+    <string name="data2">50~60:</string>
+    <string name="data3">60~80:</string>
+    <string name="data4">80~100:</string>
+    <string name="data5">100~110:</string>
+    <string name="data6">110~120:</string>
+    <string name="data7">>=200:</string>
     <string name="time">时间</string>
     <string name="number">数值</string>
     <string name="time_1">2015&#8211;05&#8211;21</string>

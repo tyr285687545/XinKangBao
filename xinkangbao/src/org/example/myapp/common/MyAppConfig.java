@@ -49,6 +49,7 @@ public class MyAppConfig {
 	//
 	public static final String USER_DOC_CHAT_MSG_URL = "http://rj17701.sinaapp.com/index.php/chatmessage/getunreadsdetail/";
 
+	
 	public static final int UPDATE_MESSAGE_COUNT = 120000;
 	
 	
@@ -65,7 +66,6 @@ public class MyAppConfig {
 	
 	//获取订单列表
 	public static final String PATIENT_GET_ORDER_LIST = "http://rj17701.sinaapp.com/index.php/appointmentrecord/GetAppointmentsByPat/";
-
 	
 	//获取帖子列表
 	public static final String PATIENT_GET_POST_LIST = "http://rj17701.sinaapp.com/index.php/node/showInMobile/";
@@ -109,5 +109,8 @@ public class MyAppConfig {
 	
 	//学历列表
 	public static final String GET_EDUCATION = "http://1.rj17701.sinaapp.com/index.php/sortword/getedu";
+	
+	//获取心跳区间
+	public static final String GET_ONE_MINUTE_HEARTBEAT = "http://rj17701.sinaapp.com/index.php/healthyindex/recenttimes/";
 	
 }

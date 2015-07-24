@@ -60,6 +60,7 @@ public class AppContext extends Application {
 	private boolean login = false; // 閻ц缍嶉悩鑸碉拷锟�
 	private int loginUid = 0; // 閻ц缍嶉悽銊﹀煕閻ㄥ埇d
 	private Hashtable<String, Object> memCacheRegion = new Hashtable<String, Object>();
+	private List<String> heartBeatOneMin;
 	private static AppContext instance;
 	private String saveImagePath;// 娣囨繂鐡ㄩ崶鍓у鐠侯垰绶�
 
@@ -72,6 +73,14 @@ public class AppContext extends Application {
 				.getAppExceptionHandler());
 		init();
 		initImageLoaderConfiguration(AppContext.this);
+	}
+
+	public List<String> getHeartBeatOneMin() {
+		return heartBeatOneMin;
+	}
+
+	public void setHeartBeatOneMin(List<String> heartBeatOneMin) {
+		this.heartBeatOneMin = heartBeatOneMin;
 	}
 
 	public static AppContext getInstance() {

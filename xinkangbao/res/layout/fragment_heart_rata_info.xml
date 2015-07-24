@@ -305,7 +305,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="8"
-                    android:text="@string/maibo_in_onemin"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -342,7 +341,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="8"
-                    android:text="@string/maibo_in_onemin"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -379,7 +377,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="8"
-                    android:text="@string/maibo_in_onemin"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -416,7 +413,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="8"
-                    android:text="@string/maibo_in_onemin"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -453,7 +449,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="8"
-                    android:text="@string/maibo_in_onemin"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -490,7 +485,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="8"
-                    android:text="@string/maibo_in_onemin"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -527,7 +521,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="8"
-                    android:text="@string/maibo_in_onemin"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -568,7 +561,7 @@
                 android:layout_height="53dp"
                 android:layout_below="@+id/rela_rate_data_title"
                 android:background="#FFF"
-                android:baselineAligned="false" 
+                android:baselineAligned="false"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
@@ -583,8 +576,8 @@
                         android:id="@+id/tv_data_1_title"
                         android:layout_width="72dp"
                         android:layout_height="30dp"
-                        android:gravity="center"
                         android:background="@drawable/heartdata"
+                        android:gravity="center"
                         android:text="@string/time"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -600,89 +593,23 @@
                         android:id="@+id/tv_data_1_content"
                         android:layout_width="72dp"
                         android:layout_height="30dp"
-                        android:gravity="center"
-                        android:background="@drawable/heartdata"
                         android:layout_marginLeft="5dp"
+                        android:background="@drawable/heartdata"
+                        android:gravity="center"
                         android:text="@string/number"
                         android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/cut_line_data_1"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/linear_data_1"
-                android:background="#E6E6E6" />
-
-            <LinearLayout
-                android:id="@+id/linear_data_2"
-                android:layout_width="match_parent"
-                android:layout_height="53dp"
-                android:layout_below="@+id/cut_line_data_1"
-                android:background="#FFF"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:id="@+id/tv_data_2_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="5"
-                    android:gravity="center_horizontal"
-                    android:text="@string/time_1"
-                    android:textColor="#A4A4A4"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/tv_data_2_content"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="5"
-                    android:gravity="center"
-                    android:text="@string/maibo_in_onemin"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/cut_line_data_2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/linear_data_2"
-                android:background="#E6E6E6" />
-
-            <LinearLayout
+            <ListView
                 android:id="@+id/linear_data_3"
                 android:layout_width="match_parent"
-                android:layout_height="53dp"
-                android:layout_below="@+id/cut_line_data_2"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear_data_1"
                 android:background="#FFF"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:id="@+id/tv_data_3_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="5"
-                    android:gravity="center_horizontal"
-                    android:text="@string/time_2"
-                    android:textColor="#A4A4A4"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/tv_data_3_content"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="5"
-                    android:gravity="center"
-                    android:text="@string/maibo_in_onemin"
-                    android:textSize="16sp" />
-            </LinearLayout>
+                android:orientation="horizontal"
+                android:scrollbars="none" />
         </RelativeLayout>
     </RelativeLayout>
 

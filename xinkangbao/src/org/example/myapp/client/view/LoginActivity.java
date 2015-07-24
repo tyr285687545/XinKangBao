@@ -72,7 +72,8 @@ public class LoginActivity extends Activity {
 		if (isReLoad) {
 			String name = mySharedPreferences
 					.getString("current_login_tel", "");
-			if (StringUtils.isEmpty(accountEt.getText().toString())) {
+			if (StringUtils.isEmpty(accountEt.getText().toString()))
+			{
 				accountEt.setText(name);
 			}
 			passwordEt.setText("");
