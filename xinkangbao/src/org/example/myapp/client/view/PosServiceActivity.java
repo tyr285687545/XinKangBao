@@ -54,7 +54,7 @@ public class PosServiceActivity extends Activity {
 		
 		setContentView(R.layout.activity_geometry);
 		
-		SDKInitializer.initialize(getApplicationContext());
+//		SDKInitializer.initialize(getApplicationContext());
 		
 		mMapView = (MapView) findViewById(R.id.bmapView);
 		

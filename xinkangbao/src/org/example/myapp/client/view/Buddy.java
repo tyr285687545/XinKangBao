@@ -18,6 +18,8 @@ import org.example.myapp.common.ReturnObj;
 import org.example.myapp.common.StringUtils;
 import org.example.myapp.widget.BannerLayout;
 
+import com.baidu.mapapi.SDKInitializer;
+
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.AlertDialog.Builder;
@@ -124,7 +126,9 @@ public class Buddy extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.function);
-
+		
+		SDKInitializer.initialize(getApplicationContext());
+		
 		ManageActivity.addActiviy("buddyActivity", Buddy.this);
 		bannerLayout = (BannerLayout) findViewById(R.id.function_banner);
 		
